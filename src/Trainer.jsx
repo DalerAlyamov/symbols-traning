@@ -1,9 +1,10 @@
 import React from "react";
-import symbols from "./symbols";
+import hiraganaList from "./hiragana-list";
+import katakanaList from "./katakana-list";
 
 let randInt = undefined;
 
-const Trainer = ({ setPage }) => {
+const Trainer = ({ symbolType, setPage }) => {
   const inputRef = React.useRef(null);
   const [value, setValue] = React.useState("");
   const [currentSymbol, setCurrentSymbol] = React.useState("");
@@ -15,9 +16,9 @@ const Trainer = ({ setPage }) => {
     if (e.target.value === currentSymbol.transcript) {
       if (help === "") setCounter((prev) => prev + 1);
       randInt = undefined;
-      do randInt = Math.floor(Math.random() * 46);
+      do randInt = Math.floor(Math.random() * 70);
       while (randInt === currentSymbol.index);
-      setCurrentSymbol(symbols[randInt]);
+      setCurrentSymbol(symbolType === "hiragana" ? hiraganaList[randInt] : katakanaList[randInt]);
       setValue("");
       setHelp("");
     }
@@ -47,8 +48,9 @@ const Trainer = ({ setPage }) => {
 
   React.useEffect(() => {
     inputRef.current.focus();
-    setCurrentSymbol(symbols[Math.floor(Math.random() * 46)]);
-  }, []);
+    randInt = Math.floor(Math.random() * 70);
+    setCurrentSymbol(symbolType === "hiragana" ? hiraganaList[randInt] : katakanaList[randInt]);
+  }, [symbolType]);
 
   return (
     <div className="trainer-view">

@@ -1,4 +1,4 @@
-const symbols = [
+const hiraganaList = [
   {
     symbol: "あ",
     transcript: "a",
@@ -11,7 +11,7 @@ const symbols = [
   },
   {
     symbol: "う",
-    transcript: "y",
+    transcript: "u",
     index: 2,
   },
   {
@@ -229,6 +229,131 @@ const symbols = [
     transcript: "n",
     index: 45,
   },
+  {
+    symbol: "が",
+    transcript: "ga",
+    index: 46,
+  },
+  {
+    symbol: "ぎ",
+    transcript: "gi",
+    index: 47,
+  },
+  {
+    symbol: "ぐ",
+    transcript: "gu",
+    index: 48,
+  },
+  {
+    symbol: "げ",
+    transcript: "ge",
+    index: 49,
+  },
+  {
+    symbol: "ご",
+    transcript: "go",
+    index: 50,
+  },
+  {
+    symbol: "ざ",
+    transcript: "za",
+    index: 51,
+  },
+  {
+    symbol: "じ",
+    transcript: "ji",
+    index: 52,
+  },
+  {
+    symbol: "ず",
+    transcript: "zu",
+    index: 53,
+  },
+  {
+    symbol: "ぜ",
+    transcript: "ze",
+    index: 54,
+  },
+  {
+    symbol: "ぞ",
+    transcript: "zo",
+    index: 55,
+  },
+  {
+    symbol: "だ",
+    transcript: "da",
+    index: 56,
+  },
+  {
+    symbol: "ぢ",
+    transcript: "ji",
+    index: 57,
+  },
+  {
+    symbol: "づ",
+    transcript: "zu",
+    index: 58,
+  },
+  {
+    symbol: "で",
+    transcript: "de",
+    index: 59,
+  },
+  {
+    symbol: "ど",
+    transcript: "do",
+    index: 60,
+  },
+  {
+    symbol: "ば",
+    transcript: "ba",
+    index: 61,
+  },
+  {
+    symbol: "び",
+    transcript: "bi",
+    index: 62,
+  },
+  {
+    symbol: "ぶ",
+    transcript: "bu",
+    index: 63,
+  },
+  {
+    symbol: "べ",
+    transcript: "be",
+    index: 64,
+  },
+  {
+    symbol: "ぼ",
+    transcript: "bo",
+    index: 65,
+  },
+  {
+    symbol: "ぱ",
+    transcript: "pa",
+    index: 66,
+  },
+  {
+    symbol: "ぴ",
+    transcript: "pi",
+    index: 67,
+  },
+  {
+    symbol: "ぷ",
+    transcript: "pu",
+    index: 68,
+  },
+  {
+    symbol: "ぺ",
+    transcript: "pe",
+    index: 69,
+  },
+  {
+    symbol: "ぽ",
+    transcript: "po",
+    index: 70,
+  },
 ];
 
-export default symbols;
+export default hiraganaList;

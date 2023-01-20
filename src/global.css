@@ -1,125 +1,150 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	border: none;
-	outline: none;
-	background: none;
-	list-style: none;
-	text-decoration: none;
-	font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: none;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+	color: #fff;
 }
 
 body {
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-	background: #000;
-	color: #fff;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
 }
 
 .trainer-view {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .form {
-	width: 300px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 180px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 180px;
 }
 
 .symbol-group {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .symbol {
-	font-size: 9rem;
-	line-height: 1;
-	font-weight: 900;
+  font-size: 9rem;
+  line-height: 1;
+  font-weight: 900;
 }
 
 .help {
-	color: rgba(173, 173, 173, 0.193);
-	height: 60px;
-	font-size: 1.8rem;
-	text-transform: lowercase;
-	text-align: center;
+  color: rgba(173, 173, 173, 0.193);
+  height: 60px;
+  font-size: 1.8rem;
+  text-transform: lowercase;
+  text-align: center;
 }
 
 .input {
-	width: 100%;
-	background: #000000;
-	height: 60px;
-	text-align: center;
-	color: #fff;
-	font-size: 1.8rem;
-	transition: 80ms linear;
-	text-transform: lowercase;
+  width: 100%;
+  background: #000000;
+  height: 60px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+  transition: 80ms linear;
+  text-transform: lowercase;
 }
 
 .input:focus {
-	border-color: #2a2a2e;
+  border-color: #2a2a2e;
 }
 
-.table-view {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	padding-top: 100px;
-	overflow: hidden;
-	width: 100%;
-	grid-gap: 0;
-	pointer-events: none;
+.table-title {
+  height: calc((100vh - 870px) / 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	user-select: none;
+}
+
+.change-symbol-type-button {
+  font-size: 2rem;
+  font-weight: 200;
+  opacity: 0.5;
+	cursor: pointer;
+}
+
+.content {
+	user-select: none;
+}
+
+.table-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  width: 100%;
+  grid-gap: 0;
 }
 
 .table {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
 }
 
 .table:first-child {
-	border-right: 1px solid #171717;
+  border-right: 1px solid #171717;
 }
 
 .table-cell {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding: 20px 0;
-	height: 145px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  height: 145px;
 }
 
 .table-cell-symbol {
-	font-size: 3rem;
-	font-weight: 900;
+  font-size: 3rem;
+  font-weight: 900;
 }
 
 .table-cell-transcript {
-	font-size: 1.5rem;
-	opacity: 0.7;
+  font-size: 1.5rem;
+  opacity: 0.7;
 }
 
 .pagination {
-	text-align: center;
-	margin-top: 45px;
-	font-weight: 200;
-	font-size: 1.125rem;
-	opacity: 0.6;
+  height: calc((100vh - 870px) / 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 200;
+  font-size: 1.125rem;
+  opacity: 0.6;
+}
+
+.pagination span {
+  width: 20px;
+  text-align: center;
 }
 
 .counter {
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	text-align: right;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
 }
