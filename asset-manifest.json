@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/symbols-trening/static/css/main.41a696de.css",
+    "main.js": "/symbols-trening/static/js/main.9991d448.js",
+    "index.html": "/symbols-trening/index.html",
+    "main.41a696de.css.map": "/symbols-trening/static/css/main.41a696de.css.map",
+    "main.9991d448.js.map": "/symbols-trening/static/js/main.9991d448.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41a696de.css",
+    "static/js/main.9991d448.js"
+  ]
+}
