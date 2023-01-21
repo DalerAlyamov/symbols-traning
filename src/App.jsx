@@ -1,5 +1,6 @@
 import React from "react";
 import hiraganaList from "./hiragana-list";
+import katakanaList from "./katakana-list";
 import HiraganaTable from "./HiraganaTable";
 import KatakanaTable from "./KatakanaTable";
 import Settings from "./Settings";
@@ -35,7 +36,7 @@ const App = () => {
       )
     );
     setFilteredKatakanaList(
-      hiraganaList.filter(
+      katakanaList.filter(
         (symbol) =>
           (settings.katakanaMain && symbol.type === "main") ||
           (settings.katakanaDakuon && symbol.type === "dakuon") ||
@@ -70,10 +71,8 @@ const App = () => {
         setPage={setPage}
       />
     );
-  else if (symbolType === "hiragana")
-    return <HiraganaTable settings={settings} setPage={setPage} />;
-  else if (symbolType === "katakana")
-    return <KatakanaTable settings={settings} setPage={setPage} />;
+  else if (symbolType === "hiragana") return <HiraganaTable settings={settings} setPage={setPage} />;
+  else if (symbolType === "katakana") return <KatakanaTable settings={settings} setPage={setPage} />;
 };
 
 export default App;

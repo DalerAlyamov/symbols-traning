@@ -3,6 +3,7 @@ import "./settings.css";
 
 const Settings = ({ symbolType, setSymbolType, settings, setSettings, setPage }) => {
   const handleChangeSymbolsType = (e) => {
+    if (e.button === 2) return;
     e.stopPropagation();
     setSymbolType(symbolType === "hiragana" ? "katakana" : "hiragana");
   };

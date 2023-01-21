@@ -13,7 +13,7 @@ const HiraganaTable = (props) => {
     };
     const handleWheelScroll = (wheel) => {
       if (wheel.deltaY < 0) setPage((prev) => (prev === 1 ? 1 : prev - 1));
-      else setPage((prev) => (prev === 2 ? 2 : prev + 1));
+      else setPage((prev) => (prev === 5 ? 5 : prev + 1));
     };
     window.addEventListener("keydown", handleKeyDown);
     window.addEventListener("wheel", handleWheelScroll);
@@ -28,7 +28,7 @@ const HiraganaTable = (props) => {
       <div className="table-title">Hiragana</div>
       <div className="content" onMouseDown={handleMouseDownonContent}>
         {page === 1 && (
-          <div className="table-container">
+          <div className="table-container col-2">
             <div className="table">
               <div className="table-cell">
                 <div className="table-cell-symbol">あ</div>
@@ -335,10 +335,218 @@ const HiraganaTable = (props) => {
             </div>
           </div>
         )}
-        <div className="pagination">
-          <span>{page}</span>
-          <span>/</span>
-          <span>2</span>
+        {page === 3 && (
+          <div className="table-container col-2">
+            <div className="table">
+              <div className="table-cell">
+                <div className="table-cell-symbol">きゃ</div>
+                <div className="table-cell-transcript">kya</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">きゅ</div>
+                <div className="table-cell-transcript">kyu</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">きょ</div>
+                <div className="table-cell-transcript">kyo</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">ぎゃ</div>
+                <div className="table-cell-transcript">gya</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">ぎゅ</div>
+                <div className="table-cell-transcript">gyu</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">ぎょ</div>
+                <div className="table-cell-transcript">gyo</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">しゃ</div>
+                <div className="table-cell-transcript">sha</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">しゅ</div>
+                <div className="table-cell-transcript">shu</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">しょ</div>
+                <div className="table-cell-transcript">sho</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">じゃ</div>
+                <div className="table-cell-transcript">ja</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">じゅ</div>
+                <div className="table-cell-transcript">ju</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">じょ</div>
+                <div className="table-cell-transcript">jo</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">ちゃ</div>
+                <div className="table-cell-transcript">cha</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">ちゅ</div>
+                <div className="table-cell-transcript">chu</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">ちょ</div>
+                <div className="table-cell-transcript">cho</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">にゃ</div>
+                <div className="table-cell-transcript">nya</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">にゅ</div>
+                <div className="table-cell-transcript">nyu</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">にょ</div>
+                <div className="table-cell-transcript">nyo</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">ひゃ</div>
+                <div className="table-cell-transcript">hya</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">ひゅ</div>
+                <div className="table-cell-transcript">hyu</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">ひょ</div>
+                <div className="table-cell-transcript">hyo</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">びゃ</div>
+                <div className="table-cell-transcript">bya</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">びゅ</div>
+                <div className="table-cell-transcript">byu</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">びょ</div>
+                <div className="table-cell-transcript">byo</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">ぴゃ</div>
+                <div className="table-cell-transcript">pya</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">ぴゅ</div>
+                <div className="table-cell-transcript">pyu</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">ぴょ</div>
+                <div className="table-cell-transcript">pyo</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">みゃ</div>
+                <div className="table-cell-transcript">mya</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">みゅ</div>
+                <div className="table-cell-transcript">myu</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">みょ</div>
+                <div className="table-cell-transcript">myo</div>
+              </div>
+            </div>
+            <div className="table">
+              <div className="table-cell">
+                <div className="table-cell-symbol">りゃ</div>
+                <div className="table-cell-transcript">rya</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">りゅ</div>
+                <div className="table-cell-transcript">ryu</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">りょ</div>
+                <div className="table-cell-transcript">ryo</div>
+              </div>
+            </div>
+          </div>
+        )}
+        {page === 4 && (
+          <div className="table-container">
+            <div className="table col-4">
+              <div className="table-cell">
+                <div className="table-cell-symbol">っ+k</div>
+                <div className="table-cell-transcript">kk</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">っ+s</div>
+                <div className="table-cell-transcript">ss</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">っ+t</div>
+                <div className="table-cell-transcript">tt</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">っ+p</div>
+                <div className="table-cell-transcript">pp</div>
+              </div>
+            </div>
+          </div>
+        )}
+        {page === 5 && (
+          <div className="table-container">
+            <div className="table">
+              <div className="table-cell">
+                <div className="table-cell-symbol">ああ</div>
+                <div className="table-cell-transcript">aa</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">いい</div>
+                <div className="table-cell-transcript">ii</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">うう</div>
+                <div className="table-cell-transcript">uu</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">ええ</div>
+                <div className="table-cell-transcript">ee</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">おお</div>
+                <div className="table-cell-transcript">oo</div>
+              </div>
+              <div className="table-cell" />
+              <div className="table-cell" />
+              <div className="table-cell" />
+              <div className="table-cell">
+                <div className="table-cell-symbol">えい</div>
+                <div className="table-cell-transcript">ei</div>
+              </div>
+              <div className="table-cell">
+                <div className="table-cell-symbol">おう</div>
+                <div className="table-cell-transcript">ou</div>
+              </div>
+            </div>
+          </div>
+        )}
+        <div className="footer">
+          <div className="pagination">
+            <span>{page}</span>
+            <span>/</span>
+            <span>5</span>
+          </div>
+          <div className="page-description">
+            {page === 1 && "Main"}
+            {page === 2 && "Daukon"}
+            {page === 3 && "Combo"}
+            {page === 4 && "Small っ"}
+            {page === 5 && "Long Vowels"}
+          </div>
         </div>
       </div>
     </>
