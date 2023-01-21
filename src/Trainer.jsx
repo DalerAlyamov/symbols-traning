@@ -1,10 +1,8 @@
 import React from "react";
-import hiraganaList from "./hiragana-list";
-import katakanaList from "./katakana-list";
 
 let randInt = undefined;
 
-const Trainer = ({ symbolType, setPage }) => {
+const Trainer = ({ hiraganaList, katakanaList, symbolType, setPage }) => {
   const inputRef = React.useRef(null);
   const [value, setValue] = React.useState("");
   const [currentSymbol, setCurrentSymbol] = React.useState("");
@@ -16,9 +14,16 @@ const Trainer = ({ symbolType, setPage }) => {
     if (e.target.value === currentSymbol.transcript) {
       if (help === "") setCounter((prev) => prev + 1);
       randInt = undefined;
-      do randInt = Math.floor(Math.random() * 70);
-      while (randInt === currentSymbol.index);
-      setCurrentSymbol(symbolType === "hiragana" ? hiraganaList[randInt] : katakanaList[randInt]);
+      if (symbolType === "hiragana") {
+        do randInt = Math.floor(Math.random() * hiraganaList.length);
+        while (randInt === currentSymbol.index);
+        setCurrentSymbol(hiraganaList[randInt]);
+      } 
+      if (symbolType === "katakana") {
+        do randInt = Math.floor(Math.random() * katakanaList.length);
+        while (randInt === currentSymbol.index);
+        setCurrentSymbol(katakanaList[randInt]);
+      } 
       setValue("");
       setHelp("");
     }
@@ -36,7 +41,7 @@ const Trainer = ({ symbolType, setPage }) => {
       }
     };
     const handleMouseDown = (mouse) => {
-      if (mouse.button === 2) setPage("table");
+      if (mouse.button === 2) setPage("settings");
     };
     window.addEventListener("mousedown", handleMouseDown);
     window.addEventListener("keydown", handleKeyDown);
@@ -48,9 +53,15 @@ const Trainer = ({ symbolType, setPage }) => {
 
   React.useEffect(() => {
     inputRef.current.focus();
-    randInt = Math.floor(Math.random() * 70);
-    setCurrentSymbol(symbolType === "hiragana" ? hiraganaList[randInt] : katakanaList[randInt]);
-  }, [symbolType]);
+    if (symbolType === "hiragana") {
+      randInt = Math.floor(Math.random() * hiraganaList.length);
+      setCurrentSymbol(hiraganaList[randInt]);
+    }
+    if (symbolType === "katakana") {
+      randInt = Math.floor(Math.random() * katakanaList.length);
+      setCurrentSymbol(katakanaList[randInt]);
+    }
+  }, [hiraganaList, katakanaList, symbolType]);
 
   return (
     <div className="trainer-view">

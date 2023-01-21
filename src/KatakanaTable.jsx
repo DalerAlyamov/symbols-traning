@@ -4,12 +4,12 @@ const KatakanaTable = (props) => {
   const [page, setPage] = React.useState(1);
 
   const handleMouseDownonContent = (mouse) => {
-    if (mouse.button === 0) props.setPage("trainer");
+    if (mouse.button === 0) props.setPage("settings");
   };
 
   React.useEffect(() => {
     const handleKeyDown = (key) => {
-      if (key.code === "Enter") props.setPage("trainer");
+      if (key.code === "Enter") props.setPage("settings");
     };
     const handleWheelScroll = (wheel) => {
       if (wheel.deltaY < 0) setPage((prev) => (prev === 1 ? 1 : prev - 1));
@@ -25,14 +25,7 @@ const KatakanaTable = (props) => {
 
   return (
     <>
-      <div className="table-title">
-        <button
-          className="change-symbol-type-button"
-          onClick={() => props.setSymbolType((prev) => (prev === "hiragana" ? "katakana" : "hiragana"))}
-        >
-          Katakana
-        </button>
-      </div>
+      <div className="table-title">Katakana</div>
       <div className="content" onMouseDown={handleMouseDownonContent}>
         {page === 1 && (
           <div className="table-container">
